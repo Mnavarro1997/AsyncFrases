@@ -37,7 +37,6 @@ namespace AsyncFrases
             string _url = "https://artii.herokuapp.com/make?text=";
             using (var http = new HttpClient())
             {
-                
                 string url = $"{_url}{words}{words.Replace(" ", "+")}&font={font}";
                 var result = await http.GetStringAsync(url);
                 Console.WriteLine(result);
